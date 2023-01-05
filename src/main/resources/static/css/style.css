@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#code_snippet {
+  display: block;
+  overflow: hidden;
+  resize: none;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: decimal !important;
+}
