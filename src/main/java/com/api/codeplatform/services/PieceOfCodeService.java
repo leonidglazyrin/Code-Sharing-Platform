@@ -1,5 +1,6 @@
 package com.api.codeplatform.services;
 
+import com.api.codeplatform.exceptions.ApiException;
 import com.api.codeplatform.model.PieceOfCode;
 import com.api.codeplatform.repository.PieceOfCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class PieceOfCodeService {
             adjustViewLimit(snippet);
             return snippet;
         } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Snippet not found");
+            throw new ApiException("Code snippet not found. I has expired or the UUID is isn't associated with any.");
         }
     }
 
@@ -43,10 +44,10 @@ public class PieceOfCodeService {
         }
     }
 
-    private void checkTimedOut(PieceOfCode snippet) throws ResponseStatusException{
+    private void checkTimedOut(PieceOfCode snippet) {
         if(snippet.getSecondsToDelete() < 0){
             this.pieceOfCodeRepository.deleteById(snippet.getId());
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Snippet not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
 
