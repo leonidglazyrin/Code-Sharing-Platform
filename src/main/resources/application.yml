@@ -1,6 +1,6 @@
 server:
-  port: 8889
-#  port: 5000
+#  port: 8889
+  port: 5000
   management:
     endpoints:
       shutdown:
@@ -10,11 +10,11 @@ spring:
   thymeleaf:
     cache: false
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/snippets
-#    jdbc-url: jdbc:postgresql://snippets.com233sow277.us-east-1.rds.amazonaws.com:5432/postgres
+#    jdbc-url: jdbc:postgresql://localhost:5432/snippets
+    jdbc-url: jdbc:postgresql://snippets.com233sow277.us-east-1.rds.amazonaws.com:5432/postgres
     username: postgres
-    password: connect
-#    password: connectaws
+#    password: connect
+    password: connectaws
     pool-size: 30
   jpa:
     show-sql: true

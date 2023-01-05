@@ -11,7 +11,7 @@ public class DefaultController implements ErrorController {
 
     @RequestMapping("/")
     public String defaultMapping(HttpServletResponse httpResponse){
-        return "redirect:code/new";
+        return "default";
     }
 
     @RequestMapping("/error")
