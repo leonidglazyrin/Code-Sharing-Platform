@@ -33,6 +33,7 @@ public class ApiController {
         return pieceOfCodeService.getLatest();
     }
 
+    @CrossOrigin
     @PostMapping("/code/new")
     public ResponseEntity<Object> postNewCode(@RequestBody PieceOfCode pieceOfCode) {
         UUID id = this.pieceOfCodeService.addCode(pieceOfCode);
