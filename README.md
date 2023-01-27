@@ -25,8 +25,12 @@ Send a code snippet with
 ```sh
 {"code": "{your code}", "views": {view limit}, "time": {time in seconds limit}}
 ```
-
 as the request body.
+
+```sh
+{"id": {the unique identifier of that code snippet}}
+```
+Will be returned.
 
 The `views` parameter specifies the maximum number of times that a code snippet can be retrieved before it is automatically deleted. For example, if a user sets the views parameter to 10, the code snippet will be deleted after it has been retrieved 10 times.
 
