@@ -1,6 +1,6 @@
 # Code Sharing Platform API made with Spring Boot
 
-Deployed on AWS Elastic Beanstalk with a PostgreSQL database on AWS RDS. [Link](http://codesharingplatformwithspringboot-env.eba-kym3bz5b.us-east-1.elasticbeanstalk.com)
+Deployed on AWS Elastic Beanstalk with a PostgreSQL database on AWS RDS. [Link](https://codesharingplatform.com/)
 
 ## Description
 
